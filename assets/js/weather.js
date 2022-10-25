@@ -1,12 +1,14 @@
 const windowEl = {
     init: () => {
-
+        document
+            .getElementById('btnCurrent')
+            .addEventListener('click', windowEl.getLocation);
     },
 
 
-    fetchWeather: (ev) => {
-        let lat = '38.84';
-        let lon = '-104.82';
+    fetchWeather: (position) => {
+        let lat =String(position.coords.latitude);
+        let lon =String(position.coords.longitude);
         let key = '890c3bde92eb251b023ba65f63eb1c36';
         let url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + key + '&units=metric&lang=en';
         console.log(url);
@@ -23,23 +25,29 @@ const windowEl = {
     getLocation: (ev) => {
         let opts = {
             enableHighAccuracy: true,
-            timeout:1000 * 10,
+            timeout: 1000 * 10,
             maximumAge: 1000 * 60 * 5,
         };
-        navigator.geolocation.getCurrentPosition(windowEl.ftw, windowEl.wtf, opts)
+        navigator.geolocation.getCurrentPosition(windowEl.fetchWeather, windowEl.oops)
     },
     ftw: (position) => {
-        lat = position.coords.laitude.toFixed(2);
-        lon = position.coords.longitude.toFixed(2);
+       // let lat =(position.coords.latitude);
+       // let lon =(position.coords.longitude);
+       // console.log(lat);
+       // console.log(lon);
+
+windowEl.fetchWeather(position);
+    },
+    oops: () => {
+        console.log("Oops");
     },
 
     showWeather: (resp) => {
         var h2El = document.getElementById('window');
-        h2El.textContent = resp
-        console.log(resp);
+h2El.textContent = resp
+console.log(resp);
 
     },
 
 };
 windowEl.init();
-windowEl.fetchWeather();
