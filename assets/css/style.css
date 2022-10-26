@@ -1,0 +1,16 @@
+#cat{
+    height: 250px;
+    width: 250px;
+    background-color: black;
+    border: black solid;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#cat:hover{
+    background-color: grey;
+    /* messing around. will do this in tailwind */
+}
+
+#quote{
+    background-color: goldenrod;
+}

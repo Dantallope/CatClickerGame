@@ -43,5 +43,3 @@ const windowEl = {
 };
 windowEl.init();
 windowEl.fetchWeather();
-
-
