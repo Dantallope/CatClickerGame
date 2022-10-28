@@ -22,4 +22,5 @@ function saveGame()
     saveData.happiness = happiness;
     saveData.hunger = hunger;
     saveData.water = water;
+    localStorage.setItem("catclicker", saveData);
 }
