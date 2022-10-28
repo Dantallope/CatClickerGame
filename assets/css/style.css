@@ -21,6 +21,7 @@
     text-align: center;
     border: 2px solid black;
     border-radius: 20px;
+<<<<<<< HEAD
 }
 
 #score {
@@ -32,3 +33,6 @@
     height: 50px;
     position: relative;
 }
+=======
+  }
+>>>>>>> 7c8a8d923ce43d923a7f749055c7615bdd0b7c80
