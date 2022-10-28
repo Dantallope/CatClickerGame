@@ -1,12 +1,3 @@
-//TODO: these will be populated at runtime
-var saveData;
-var totalClicks;
-var happiness;
-var hunger;
-var water;
-
-loadGame();
-
 class happinessBar {
     constructor (element, initialValue = 0) {
         this.valueElem = element.querySelector('.happiness-bar-value');

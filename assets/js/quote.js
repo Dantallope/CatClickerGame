@@ -22,7 +22,9 @@ getQuote(quoteUrl);
 //listens for click to show quote
 cat.addEventListener('click', function(event) {
     event.preventDefault()
-    console.log('clicked')
+    totalClicks++;
+    saveGame();
+    console.log(totalClicks)
     var quote = getQuote(quoteUrl).then(function(quote) {
         quoteShown.innerHTML = quote
     })
