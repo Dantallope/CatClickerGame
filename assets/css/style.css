@@ -14,3 +14,21 @@
 #quote{
     background-color: goldenrod;
 }
+#clock {
+    font-size: 175px;
+    width: 900px;
+    margin: 200px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#score {
+    padding: 50px;
+    background-color: khaki;
+    margin-top: 20px;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
