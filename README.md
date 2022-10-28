@@ -1,1 +1,2 @@
-# TGG-Project1
+# Cat Clicker
+### An HTML/JS zen clicker game. With cat!
