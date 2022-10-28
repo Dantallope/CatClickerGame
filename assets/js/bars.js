@@ -1,3 +1,12 @@
+//TODO: these will be populated at runtime
+var saveData;
+var totalClicks;
+var happiness;
+var hunger;
+var water;
+
+loadGame();
+
 class happinessBar {
     constructor (element, initialValue = 0) {
         this.valueElem = element.querySelector('.happiness-bar-value');
@@ -15,6 +24,7 @@ class happinessBar {
             newValue = 100
         }
         
+        happiness = newValue;
         this.value = newValue;
         this.update();
     }
@@ -24,22 +34,25 @@ class happinessBar {
 
         this.fillElem.style.width = percentage;
         this.valueElem.textContent = percentage;
+        saveGame();
     }
     
     happybarUp(){
         this.value = this.value + 10;
         this.setValue(this.value)
+        saveGame();
     }
 
     happybardown(){
         this.value = this.value - 10;
         this.setValue(this.value)
+        saveGame();
     }
 
     
 }
 
-const happybar = new happinessBar(document.querySelector('.happiness-bar'), 55);    
+const happybar = new happinessBar(document.querySelector('.happiness-bar'), happiness);    
 // add the bar value when certain buttons are clicked 
 //need event listener, add value to increase by 10
 document.querySelector('#playButton').addEventListener('click', function(){
@@ -66,6 +79,7 @@ class hungernessBar {
             newValue = 100
         }
         
+        hunger = newValue
         this.value = newValue;
         this.update();
     }
@@ -73,19 +87,22 @@ class hungernessBar {
         const percentage = this.value + '%' ;
         this.fillElem.style.width = percentage;
         this.valueElem.textContent = percentage;
+        saveGame();
     }
         
     hungerbarUp(){
         this.value = this.value + 10;
         this.setValue(this.value)
+        saveGame();
     }
     hungerbardown(){
         this.value = this.value - 10;
         this.setValue(this.value)
+        saveGame();
     }
 }
 
-const hungerbar = new hungernessBar(document.querySelector('.hunger-bar'), 0);    
+const hungerbar = new hungernessBar(document.querySelector('.hunger-bar'), hunger);    
 // add the bar value when certain buttons are clicked 
 //need event listener, add value to increase by 10
 document.querySelector('#foodButton').addEventListener('click', function(){
@@ -111,30 +128,35 @@ class waternessBar {
             newValue = 100
         }
         
+        water = newValue;
         this.value = newValue;
         this.update();
+        saveGame();
     }
     update () {
         const percentage = this.value + '%' ;
         this.fillElem.style.width = percentage;
         this.valueElem.textContent = percentage;
+        saveGame();
     }
         
     waterbarUp(){
         this.value = this.value + 10;
         this.setValue(this.value)
+        saveGame();
     }
     waterbardown(){
         this.value = this.value - 10;
         this.setValue(this.value)
+        saveGame();
     }
 }
 
-const waterbar = new waternessBar(document.querySelector('.thirst-bar'), 0);    
+const waterbar = new waternessBar(document.querySelector('.thirst-bar'), water);    
 // add the bar value when certain buttons are clicked 
 //need event listener, add value to increase by 10
 document.querySelector('#waterButton').addEventListener('click', function(){
-    waterbar.waterbarUp()
+    waterbar.waterbarUp();
 })
 
 //the bar slowly goes down once every 15sec

@@ -1,14 +1,8 @@
-//TODO: these will be populated at runtime
-var totalClicks;
-var happiness;
-var hunger;
-var water;
-
 //load existing data if any
 function loadGame()
 {
-    var saveData = JSON.parse(localStorage.getItem("catclicker"));
-    if (saveData == null) saveData = [];
+    saveData = JSON.parse(localStorage.getItem("catclicker"));
+    if (saveData == null) return saveData = {totalClicks : 0, happiness : 0, hunger : 0, water : 0};
     totalClicks = saveData.totalClicks;
     happiness = saveData.happiness;
     hunger = saveData.hunger;
@@ -22,5 +16,5 @@ function saveGame()
     saveData.happiness = happiness;
     saveData.hunger = hunger;
     saveData.water = water;
-    localStorage.setItem("catclicker", saveData);
+    localStorage.setItem("catclicker", JSON.stringify(saveData));
 }
