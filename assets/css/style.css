@@ -63,8 +63,9 @@
 {
     position: absolute;
     font-size: 30px;
-    left: 25px;
+    left: 30px;
     top: 20px;
+    font-family: 'Seven Segment', sans-serif;
 }
 
 #hitboxFood
