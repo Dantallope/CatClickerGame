@@ -48,6 +48,17 @@
     top: 150px;
 }
 
+#hitbox
+{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    width: 250px;
+    height: 336px;
+    z-index: 99;
+    pointer-events: all;
+}
+
 #imgClock
 {
     position: absolute;
