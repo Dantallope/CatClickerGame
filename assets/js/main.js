@@ -19,7 +19,11 @@ const el_happiness = document.getElementById("happiness");
 const el_hunger = document.getElementById("hunger");
 const el_thirst = document.getElementById("thirst");
 const el_cat = document.getElementById("imgCat");
-const el_hitbox = document.getElementById("hitbox");
+const el_hitboxCat = document.getElementById("hitboxCat");
+const el_food = document.getElementById("imgFood");
+const el_hitboxFood = document.getElementById("hitboxFood");
+const el_water = document.getElementById("imgWater");
+const el_hitboxWater = document.getElementById("hitboxWater");
 const el_quote = document.getElementById("quote");
 const el_clearDataLink = document.getElementById("clearDataLink");
 const el_aboutLink = document.getElementById("aboutLink");
@@ -56,8 +60,8 @@ async function getQuote()
     el_quote.innerHTML = `${data.content} -${data.author}`;
 }
 
-//clicking raises total clicks and happiness by 1 each
-function newClick()
+//clicking cat raises total clicks and happiness by 1 each
+function catClick()
 {
     totalClicks++;
     happiness++;
@@ -68,8 +72,28 @@ function newClick()
     saveGame();
 }
 
+//decrease hunger by {needsGain} per click
+function foodClick()
+{
+    hunger -= needsGain;
+    if (hunger < 0) hunger = 0;
+    updateStats();
+    saveGame();
+}
+
+//decrease thirst by {needsGain} per click
+function waterClick()
+{
+    thirst -= needsGain;
+    if (thirst < 0) thirst = 0;
+    updateStats();
+    saveGame();
+}
+
 //event listeners
-el_hitbox.addEventListener('click', function(){newClick()});
+el_hitboxCat.addEventListener('click', function(){catClick()});
+el_hitboxFood.addEventListener('click', function(){foodClick()});
+el_hitboxWater.addEventListener('click', function(){waterClick()});
 el_clearDataLink.addEventListener('click', function()
 {
     clearData();

@@ -48,7 +48,7 @@
     top: 150px;
 }
 
-#hitbox
+#hitboxCat
 {
     position: absolute;
     left: 150px;
@@ -75,4 +75,20 @@
     font-size: 30px;
     left: 25px;
     top: 20px;
+}
+
+#hitboxFood
+{
+    position: absolute;
+    left: 450px;
+    top: 400px;
+    pointer-events: all;
+}
+
+#hitboxWater
+{
+    position: absolute;
+    left: 550px;
+    top: 400px;
+    pointer-events: all;
 }
