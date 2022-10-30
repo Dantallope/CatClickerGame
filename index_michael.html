@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kitty Clicker - A Zen Cat Petting Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="flex h-screen bg-gray-100 font-sans">
+    <!--header-->
+    <div class="flex flex-row flex-wrap flex-1 flex-grow content-start pl-16">
+        <div class="h-40 lg:h-20 w-full flex flex-wrap">
+            <div id="header" class="bg-gray-200 w-full lg:max-w-sm flex items-center border-b-1 border-gray-300 order-2 lg:order-1">
+            <div class="text-center flex-1 font-bold text-3xl text-gray-900">Kitty Clicker</div>
+            </div>
+            <nav id="header1" class="bg-gray-100 w-auto flex-1 border-b-1 border-gray-300 order-1 lg:order-2">
+                <div class="flex h-full justify-between items-center">
+                    <!--quote-->
+                    <div class="relative w-full max-h-1xl px-6">
+                        <div id="quote" class="bg-gray-200 text-gray-700 font-bold rounded-full pl-12 pr-12 py-3">Remember that a gesture of friendship, no matter how small, is always appreciated. -H. Jackson Brown Jr.</div>
+                    </div>
+                    <!--cog-->
+                    <div class="flex relative inline-block pr-6">
+                        <div class="relative text-sm">
+                            <button id="userButton" class="flex items-center focus:outline-none mr-3">
+                                <i class="text-3xl fa-solid fa-gear"></i><i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div id="userMenu" class="bg-white nunito rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
+                                <ul class="list-reset">
+                                    <li><a href="#" class="text-center px-10 py-2 block text-gray-900 hover:bg-indigo-400 hover:text-white no-underline hover:no-underline">About</a></li>
+                                    <li>
+                                        <hr class="border-t mx-2 border-gray-400">
+                                    </li>
+                                    <li><a href="#" class="text-center py-2 block text-gray-900 hover:bg-indigo-400 hover:text-white no-underline hover:no-underline">Clear data</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--left panel-->
+        <div id="dash-content" class="bg-gray-200 py-6 lg:py-0 w-full lg:max-w-sm flex flex-wrap content-start">
+            <!--clicks-->
+            <div class="w-1/2 lg:w-full">
+                <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
+                    <div class="flex flex-col items-center">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-3xl">123 <span class="text-500"><i class="text-gray-700 fa-solid fa-arrow-pointer"></i></span></h3>
+                            <h5 class="font-bold text-gray-500">Total Clicks</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--happiness-->
+            <div class="w-1/2 lg:w-full">
+                <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
+                    <div class="flex flex-col items-center">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-3xl">100% <span class="text-green-500"><i class="fa-solid fa-face-smile"></i></span></h3>
+                            <h5 class="font-bold text-gray-500">Happiness</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--hunger-->
+            <div class="w-1/2 lg:w-full">
+                <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
+                    <div class="flex flex-col items-center">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-3xl">30% <span class="text-orange-500"><i class="fa-solid fa-bowl-food"></i></span></h3>
+                            <h5 class="font-bold text-gray-500">Hunger</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--thirst-->
+            <div class="w-1/2 lg:w-full">
+                <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
+                    <div class="flex flex-col items-center">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-3xl">50% <span class="text-yellow-500"><i class="fa-solid fa-droplet"></i></span></h3>
+                            <h5 class="font-bold text-gray-500">Thirst</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--main area-->
+        <div id="main-content" class="w-full flex-1">
+            <div class="flex flex-1 flex-wrap">
+                <!--image area-->
+                <div class="w-full xl:w-2/3 p-6 xl:max-w-6xl">
+                    <div id="images" class="max-w-full lg:max-w-3xl xl:max-w-5xl">
+                        <img id="imgWeather" src="./assets/images/weather_sunny.png">
+                        <img id="imgWindow" src="./assets/images/window.png">
+                        <img id="imgCat" src="./assets/images/cat.png">
+                        <div id="imgClock">
+                            <p id="clockText">10:25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*Toggle dropdown list*/
+        /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+        var userMenuDiv = document.getElementById("userMenu");
+        var userMenu = document.getElementById("userButton");
+
+        document.onclick = check;
+
+        function check(e) {
+            var target = (e && e.target) || (event && event.srcElement);
+
+            //User Menu
+            if (!checkParent(target, userMenuDiv)) {
+                // click NOT on the menu
+                if (checkParent(target, userMenu)) {
+                    // click on the link
+                    if (userMenuDiv.classList.contains("invisible")) {
+                        userMenuDiv.classList.remove("invisible");
+                    } else {
+                        userMenuDiv.classList.add("invisible");
+                    }
+                } else {
+                    // click both outside link and outside menu, hide menu
+                    userMenuDiv.classList.add("invisible");
+                }
+            }
+
+        }
+
+        function checkParent(t, elm) {
+            while (t.parentNode) {
+                if (t == elm) {
+                    return true;
+                }
+                t = t.parentNode;
+            }
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

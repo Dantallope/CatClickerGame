@@ -6,23 +6,6 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-#cat:hover{
-    background-color: grey;
-    /* messing around. will do this in tailwind */
-}
-
-#quote{
-    background-color: goldenrod;
-}
-#clock {
-    font-size: 175px;
-    width: 900px;
-    margin: 200px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 20px;
-}
-
 #score {
     padding: 50px;
     background-color: khaki;
@@ -31,4 +14,54 @@
     width: 50px;
     height: 50px;
     position: relative;
+}
+
+#images
+{
+    position: relative;
+    left: 50px;
+    top: 50px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+#imgWeather
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#imgWindow
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#imgCat
+{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+}
+
+#imgClock
+{
+    position: absolute;
+    background-image: url("../images/clock.png");
+    left: 10px;
+    top: 350px;
+    width: 150px;
+    height: 83px;
+}
+
+#clockText
+{
+    position: absolute;
+    font-size: 30px;
+    left: 25px;
+    top: 20px;
 }
