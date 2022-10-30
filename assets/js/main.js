@@ -1,5 +1,5 @@
 //environment constants
-const quoteInterval = 25;
+const quoteInterval = 100;
 const needsInterval = 5000;
 
 //initializing core data
@@ -35,7 +35,7 @@ function updateStats()
 
 function needsTick()
 {
-    happiness -= 10;
+    happiness -= ((hunger / 10) + (thirst / 10));
     if (happiness < 0) happiness = 0;
     hunger += 10;
     if (hunger > 100) hunger = 100;
@@ -56,7 +56,9 @@ async function getQuote()
 function newClick()
 {
     totalClicks++;
-    el_totalClicks.innerHTML = totalClicks;
+    happiness++;
+    if (happiness > 100) happiness = 100;
+    updateStats();
     if (totalClicks % quoteInterval == 0) getQuote();
     saveGame();
 }
@@ -81,6 +83,7 @@ el_closeModal.addEventListener('click', function()
     el_aboutModal.classList.add("hidden");
 });
 
+//initialize game
 loadGame();
 updateStats();
-setInterval(needsTick, needsInterval)
+setInterval(needsTick, needsInterval);
