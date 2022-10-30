@@ -18,3 +18,9 @@ function saveGame()
     saveData.thirst = thirst;
     localStorage.setItem("kittyclicker", JSON.stringify(saveData));
 }
+
+function clearData()
+{
+    console.log("Clearing all data!");
+    localStorage.clear();
+}
