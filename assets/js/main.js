@@ -1,6 +1,7 @@
 //environment constants
 const quoteInterval = 100;
 const needsInterval = 5000;
+const needsGain = 10;
 
 //initializing core data
 var saveData;
@@ -33,18 +34,20 @@ function updateStats()
     el_thirst.innerHTML = thirst + "%";
 }
 
+//once every {needsInterval}, up hunger and thirst by {needsGain} and then subtract happiness by 10% of the sum of hunger and thirst
 function needsTick()
 {
+    hunger += needsGain;
+    if (hunger > 100) hunger = 100;
+    thirst += needsGain;
+    if (thirst > 100) thirst = 100;
     happiness -= ((hunger / 10) + (thirst / 10));
     if (happiness < 0) happiness = 0;
-    hunger += 10;
-    if (hunger > 100) hunger = 100;
-    thirst += 10;
-    if (thirst > 100) thirst = 100;
     saveGame();
     updateStats();
 }
 
+//fetching quote from API
 async function getQuote()
 {
     const response = await fetch(quoteUrl);
@@ -53,12 +56,14 @@ async function getQuote()
     el_quote.innerHTML = `${data.content} -${data.author}`;
 }
 
+//clicking raises total clicks and happiness by 1 each
 function newClick()
 {
     totalClicks++;
     happiness++;
     if (happiness > 100) happiness = 100;
     updateStats();
+    //if totalClicks is modulus of {quoteInterval}, fetch a new quote
     if (totalClicks % quoteInterval == 0) getQuote();
     saveGame();
 }
@@ -74,6 +79,8 @@ el_clearDataLink.addEventListener('click', function()
     thirst = 0;
     updateStats();
 });
+
+//showing and hiding the about modal
 el_aboutLink.addEventListener('click', function()
 {
     el_aboutModal.classList.remove("hidden");
