@@ -24,7 +24,7 @@
                 <div class="flex h-full justify-between items-center">
                     <!--quote-->
                     <div class="relative w-full max-h-min px-6">
-                        <div id="quote" class="bg-gray-200 text-gray-700 font-bold rounded-full pl-12 pr-12 py-3">Remember that a gesture of friendship, no matter how small, is always appreciated. -H. Jackson Brown Jr.</div>
+                        <div id="quote" class="bg-gray-200 text-gray-700 font-bold rounded-full pl-12 pr-12 py-3">Click the kitty to make it happy, click food and water to sate its needs. Higher needs mean quicker happiness depletion!</div>
                     </div>
                     <!--cog menu-->
                     <div class="flex relative min-h-full mt-10 inline-block pr-6">
@@ -34,11 +34,11 @@
                             </button>
                             <div id="userMenu" class="bg-white nunito rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
                                 <ul class="list-reset">
-                                    <li id="aboutLink"><a href="#" class="text-center px-10 py-2 block text-gray-900 hover:bg-indigo-400 hover:text-white no-underline hover:no-underline">About</a></li>
+                                    <li id="aboutLink"><a href="#" class="text-center px-10 py-2 block text-gray-900 hover:bg-gray-700 hover:text-white no-underline hover:no-underline">About</a></li>
                                     <li>
                                         <hr class="border-t mx-2 border-gray-400">
                                     </li>
-                                    <li id="clearDataLink"><a href="#" class="text-center py-2 block text-gray-900 hover:bg-indigo-400 hover:text-white no-underline hover:no-underline">Clear data</a></li>
+                                    <li id="clearDataLink"><a href="#" class="text-center py-2 block text-gray-900 hover:bg-gray-700 hover:text-white no-underline hover:no-underline">Clear data</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                 <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
                     <div class="flex flex-col items-center">
                         <div class="flex-1">
-                            <h3 class="font-bold text-3xl"><span id="totalClicks"></span> <span class="text-500"><i class="text-gray-700 fa-solid fa-arrow-pointer"></i></span></h3>
+                            <h3 class="font-bold text-3xl"><span id="totalClicks"></span> <span class="text-gray-700"><i class="fa-solid fa-arrow-pointer"></i></span></h3>
                             <h5 class="font-bold text-gray-500">Total Clicks</h5>
                         </div>
                     </div>
@@ -61,10 +61,10 @@
             </div>
             <!--happiness-->
             <div class="w-1/2 lg:w-full">
-                <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
+                <div id="happinessBar" class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
                     <div class="flex flex-col items-center">
                         <div class="flex-1">
-                            <h3 class="font-bold text-3xl"><span id="happiness"></span> <span class="text-green-500"><i class="fa-solid fa-face-smile"></i></span></h3>
+                            <h3 class="font-bold text-3xl"><span id="happiness"></span> <span class="text-gray-700"><i id="happinessIcon" class="fa-solid fa-face-smile"></i></span></h3>
                             <h5 class="font-bold text-gray-500">Happiness</h5>
                         </div>
                     </div>
@@ -72,10 +72,10 @@
             </div>
             <!--hunger-->
             <div class="w-1/2 lg:w-full">
-                <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
+                <div id="hungerBar" class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
                     <div class="flex flex-col items-center">
                         <div class="flex-1">
-                            <h3 class="font-bold text-3xl"><span id="hunger"></span> <span class="text-orange-500"><i class="fa-solid fa-bowl-food"></i></span></h3>
+                            <h3 class="font-bold text-3xl"><span id="hunger"></span> <span class="text-gray-700"><i id="hungerIcon" class="fa-solid fa-bowl-food"></i></span></h3>
                             <h5 class="font-bold text-gray-500">Hunger</h5>
                         </div>
                     </div>
@@ -83,10 +83,10 @@
             </div>
             <!--thirst-->
             <div class="w-1/2 lg:w-full">
-                <div class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
+                <div id="thirstBar" class="border-2 border-gray-300 hover:border-transparent hover:bg-white hover:shadow-xl rounded p-6 m-2 md:mx-10 md:my-6">
                     <div class="flex flex-col items-center">
                         <div class="flex-1">
-                            <h3 class="font-bold text-3xl"><span id="thirst"></span> <span class="text-yellow-500"><i class="fa-solid fa-droplet"></i></span></h3>
+                            <h3 class="font-bold text-3xl"><span id="thirst"></span> <span class="text-gray-700"><i id="thirstIcon" class="fa-solid fa-droplet"></i></span></h3>
                             <h5 class="font-bold text-gray-500">Thirst</h5>
                         </div>
                     </div>
@@ -139,22 +139,22 @@
                     <p class="text-base leading-relaxed text-gray-500">
                         <ul class="ml-10 text-gray-500">
                             <li>
-                                Name
+                                Dante
                             </li>
                             <li>
-                                Name
+                                Erech
                             </li>
                             <li>
-                                Name
+                                Jerry
                             </li>
                             <li>
-                                Name
+                                Laura
                             </li>
                             <li>
-                                Name
+                                Michael Virga
                             </li>
                             <li>
-                                Name
+                                Xavier
                             </li>
                         </ul>
                     </p>
@@ -204,6 +204,7 @@
             return false;
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js" integrity="sha512-zInFF17qBFVvvvFpIfeBzo7Tj7+rQxLeTJDmbxjBz5/zIr89YVbTNelNhdTT+/DCrxoVzBeUPVFJsczKbB7sew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/clock.js"></script>
     <script src="./assets/js/savedata.js"></script>
     <script src="./assets/js/main.js"></script>

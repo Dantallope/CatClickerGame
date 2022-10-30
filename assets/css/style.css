@@ -6,16 +6,6 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-#score {
-    padding: 50px;
-    background-color: khaki;
-    margin-top: 20px;
-    margin: 20px;
-    width: 50px;
-    height: 50px;
-    position: relative;
-}
-
 #images
 {
     position: relative;
