@@ -6,14 +6,80 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-#cat:hover{
-    background-color: grey;
+#images
+{
+    position: relative;
+    left: 50px;
+    top: 50px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 
-/* #quote{
-    color: grey;
-    animation: ease-in-out 7s;
-}   */
+#imgWeather
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
 
-  
- 
+#imgWindow
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#imgCat
+{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+}
+
+#hitboxCat
+{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    width: 250px;
+    height: 336px;
+    z-index: 99;
+    pointer-events: all;
+}
+
+#imgClock
+{
+    position: absolute;
+    background-image: url("../images/clock.png");
+    left: 10px;
+    top: 350px;
+    width: 150px;
+    height: 83px;
+}
+
+#clockText
+{
+    position: absolute;
+    font-size: 30px;
+    left: 30px;
+    top: 20px;
+    font-family: 'Seven Segment', sans-serif;
+}
+
+#hitboxFood
+{
+    position: absolute;
+    left: 450px;
+    top: 400px;
+    pointer-events: all;
+}
+
+#hitboxWater
+{
+    position: absolute;
+    left: 550px;
+    top: 400px;
+    pointer-events: all;
+}
