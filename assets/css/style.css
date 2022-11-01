@@ -1,4 +1,5 @@
-#cat{
+#cat
+{
     height: 250px;
     width: 250px;
     background-color: black;
@@ -9,6 +10,8 @@
 #images
 {
     position: relative;
+    height: 500px;
+    width: 500px;
     left: 50px;
     top: 50px;
     -moz-user-select: none;
@@ -17,25 +20,35 @@
     pointer-events: none;
 }
 
+#imgCarpet
+{
+    position: relative;
+    left: 99px;
+    top: -63px;
+}
+
 #imgWeather
 {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    position: relative;
+    left: 348px;
+    top: -50px;
+    max-width: 75%;
 }
 
 #imgWindow
 {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    position: relative;
+    left: 200px;
+    top: 200px;
 }
 
 #imgCat
 {
     position: absolute;
-    left: 150px;
-    top: 150px;
+    left: 132px;
+    top: 135px;
+    max-width: 85%;
+
 }
 
 #hitboxCat
@@ -43,8 +56,8 @@
     position: absolute;
     left: 150px;
     top: 150px;
-    width: 250px;
-    height: 336px;
+    width: 320px;
+    height: 300px;
     z-index: 99;
     pointer-events: all;
 }
@@ -54,8 +67,8 @@
     position: absolute;
     background-image: url("../images/clock.png");
     left: 10px;
-    top: 350px;
-    width: 150px;
+    top: -55px;
+    width: 100px;
     height: 83px;
 }
 
@@ -68,18 +81,57 @@
     font-family: 'Seven Segment', sans-serif;
 }
 
+#imgFood
+{
+    position: relative;
+    left: 220px;
+    top: -80px;
+    height: 237px;
+}
+
 #hitboxFood
 {
     position: absolute;
-    left: 450px;
-    top: 400px;
+    left: 770px;
+    top: 690px;
+    width: 180px;
+    height: 180px;
     pointer-events: all;
+}
+
+#imgWater
+{
+    position: relative;
+    left: 4px;
+    top: 66px;
+    height: 198px;
 }
 
 #hitboxWater
 {
     position: absolute;
-    left: 550px;
-    top: 400px;
+    left: 475px;
+    top: 675px;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+    pointer-events: all;
+}
+
+#imgPlay
+{
+    position:relative;
+    left: -8px;
+    top: 532px;
+    height: 251px;
+}
+
+#hitboxPlay
+{
+    position:relative;
+    left: 600px;
+    top: -170px;
+    width: 200px;
+    height: 200px;
     pointer-events: all;
 }
