@@ -8,9 +8,12 @@
 
 #cat:hover{
     background-color: grey;
-    /* messing around. will do this in tailwind */
 }
 
-#quote{
-    background-color: goldenrod;
-}
+/* #quote{
+    color: grey;
+    animation: ease-in-out 7s;
+}   */
+
+  
+ 

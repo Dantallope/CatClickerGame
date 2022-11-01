@@ -17,14 +17,16 @@ async function getQuote(url)
 
 getQuote(quoteUrl);
 
-
-
-//listens for click to show quote
+//listens for click to start setInterval function
 cat.addEventListener('click', function(event) {
     event.preventDefault()
-    console.log('clicked')
+    
+    console.log("clicked")
+
+})
+    //show quote every 20 seconds upon click
+setInterval(function() {
     var quote = getQuote(quoteUrl).then(function(quote) {
         quoteShown.innerHTML = quote
     })
-})
-
+}, 20000)
