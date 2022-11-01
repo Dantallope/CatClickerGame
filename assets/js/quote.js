@@ -18,7 +18,6 @@ async function getQuote(url)
 getQuote(quoteUrl);
 
 
-
 //listens for click to show quote
 cat.addEventListener('click', function(event) {
     event.preventDefault()
@@ -28,5 +27,4 @@ cat.addEventListener('click', function(event) {
     var quote = getQuote(quoteUrl).then(function(quote) {
         quoteShown.innerHTML = quote
     })
-})
-
+}, 20000)
