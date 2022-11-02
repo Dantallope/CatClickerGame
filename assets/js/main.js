@@ -48,6 +48,7 @@ function updateStats()
     el_totalClicks.innerHTML = totalClicks;
     el_happinessBar.style.backgroundColor = colorScale(happiness/100).toString();
     el_happinessIcon.style.color = colorScale(happiness/100).darken(3).toString();
+    happiness = Math.round(happiness);
     el_happiness.innerHTML = happiness + "%";
     el_hungerBar.style.backgroundColor = colorScale(1 - (hunger / 100)).toString();
     el_hungerIcon.style.color = colorScale(1 - (hunger / 100)).darken(3).toString();
