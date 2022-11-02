@@ -34,6 +34,8 @@ const el_food = document.getElementById("imgFood");
 const el_hitboxFood = document.getElementById("hitboxFood");
 const el_water = document.getElementById("imgWater");
 const el_hitboxWater = document.getElementById("hitboxWater");
+const el_play = document.getElementById("imgPlay");
+const el_hitboxPlay = document.getElementById("hitboxPlay");
 const el_quote = document.getElementById("quote");
 const el_clearDataLink = document.getElementById("clearDataLink");
 const el_aboutLink = document.getElementById("aboutLink");
@@ -106,10 +108,22 @@ function waterClick()
     saveGame();
 }
 
+function playClick()
+{
+    totalClicks++;
+    happiness++;
+    if (happiness > 100) happiness = 100;
+    updateStats();
+    if (totalClicks % quoteInterval == 0) getQuote();
+    saveGame();
+}
+
+
 //event listeners
 el_hitboxCat.addEventListener('click', function(){catClick()});
 el_hitboxFood.addEventListener('click', function(){foodClick()});
 el_hitboxWater.addEventListener('click', function(){waterClick()});
+el_hitboxPlay.addEventListener('click', function(){playClick()});
 el_clearDataLink.addEventListener('click', function()
 {
     clearData();

@@ -133,5 +133,6 @@
     top: -170px;
     width: 200px;
     height: 200px;
+    z-index: 99px;
     pointer-events: all;
 }
