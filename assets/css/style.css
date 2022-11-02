@@ -120,19 +120,19 @@
 
 #imgPlay
 {
-    position:relative;
-    left: -8px;
-    top: 532px;
+    position:absolute;
+    left: 1050px;
+    top: 600px;
     height: 251px;
 }
 
 #hitboxPlay
 {
     position:absolute;
-    left: 600px;
-    top: -170px;
+    left: 1050px;
+    top: 600px;
     width: 200px;
-    height: 200px;
+    height: 251px;
     z-index: 99px;
     pointer-events: all;
 }
