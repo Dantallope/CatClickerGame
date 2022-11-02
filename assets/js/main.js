@@ -115,9 +115,12 @@ function waterClick()
 
 function playClick()
 {
-    totalClicks++;
     happiness++;
     if (happiness > 100) happiness = 100;
+    hunger++;
+    if (hunger > 100) hunger = 100;
+    thirst++;
+    if (thirst > 100) thirst = 100;
     updateStats();
     if (totalClicks % quoteInterval == 0) getQuote();
     saveGame();
