@@ -128,7 +128,7 @@
 
 #hitboxPlay
 {
-    position:relative;
+    position:absolute;
     left: 600px;
     top: -170px;
     width: 200px;
