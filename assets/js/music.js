@@ -1,7 +1,6 @@
 const playMusic = document.getElementById('musicbtn');
-const music = document.getElementById('music');
+const music = document.getElementById('audioMusic');
 
 playMusic.addEventListener('click',function(){
-    console.log('hi')
     music.play();
 })

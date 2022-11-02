@@ -41,6 +41,7 @@ const el_clearDataLink = document.getElementById("clearDataLink");
 const el_aboutLink = document.getElementById("aboutLink");
 const el_aboutModal = document.getElementById("aboutModal");
 const el_closeModal = document.getElementById("closeModalButton");
+const audioMeow = document.getElementById('audioMeow');
 
 function updateStats()
 {
@@ -86,7 +87,11 @@ function catClick()
     if (happiness > 100) happiness = 100;
     updateStats();
     //if totalClicks is modulus of {quoteInterval}, fetch a new quote
-    if (totalClicks % quoteInterval == 0) getQuote();
+    if (totalClicks % quoteInterval == 0) 
+    {
+        getQuote();
+        audioMeow.play();
+    }
     saveGame();
 }
 
