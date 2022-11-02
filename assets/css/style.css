@@ -66,9 +66,9 @@
 {
     position: absolute;
     background-image: url("../images/clock.png");
-    left: 10px;
-    top: -55px;
-    width: 100px;
+    left: 485px;
+    top: 233px;
+    width: 110px;
     height: 83px;
 }
 
@@ -76,8 +76,8 @@
 {
     position: absolute;
     font-size: 30px;
-    left: 30px;
-    top: 20px;
+    left: 500px;
+    top: 250px;
     font-family: 'Seven Segment', sans-serif;
 }
 
