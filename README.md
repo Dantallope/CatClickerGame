@@ -34,5 +34,5 @@ Kitty Clicker uses a weather and quote API to achieve a more interactive user ex
 ## Screenshot
 ![Screenshot of website](/assets/images/stock1.png)
 ## Links
-https://dantallope.github.io/TGG-Project1/
-<br>GitHub repo: https://github.com/Dantallope/TGG-Project1
+https://dantallope.github.io/CatClickerGame/
+<br>GitHub repo: https://github.com/Dantallope/CatClickerGame/
